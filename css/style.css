@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Titillium+Web:wght@200&display=swap');
+
 
 *{
     margin: 0px;
-    padding: 0;
+    padding: 0px;
     box-sizing: border-box;
 }
 header {
@@ -20,13 +22,9 @@ header {
     align-items: center;
 } 
 
-.menu a{
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-
+.separacao {
+    background-color: white;
+    height: 5px;
 }
 
 .menu {
@@ -36,8 +34,24 @@ header {
     align-items: center;
 }
 
+.menu-barras {
+    width: 50px;
+    display: none;
+}
+
+.menu a{
+    color: rgb(218, 11, 11);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+
+}
+
 .search-box {
     width: 100px;
+    background-color: #E5E5E5;
+    border-radius: 5px;
     
 }
 
@@ -46,6 +60,7 @@ header {
     background-image: url(../img/Banner1.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     
 
 }
@@ -53,7 +68,24 @@ header {
 .texto-banner {
     color: #000B30;
     align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
     
+}
+
+.texto-banner h1 {
+    font-family: 'titillium web', sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.texto-banner a{
+    background-color: red;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 15px;
+    border-radius: 5px;
 }
 
 .posicao-texto {
@@ -62,6 +94,77 @@ header {
     color: #000B30;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
+}
 
+.secao-jogos {
+    background-color: rgb(158, 180, 152);
+    height: fit-content;
+    padding: 100px;
+}
 
+.secao-jogos img{
+    background-color: #808597;
+    border-radius: 10%;
+}
+
+.jogos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.jogos img{
+    height: 500px;
+}
+
+.secao-sobre {
+    background-color: rgb(230, 230, 230);
+    padding: 100px;
+    justify-content: center;
+}
+
+.texto-sobre {
+    color: #000B30;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .container-grid {
+        width: 90%;
+    }
+}
+    .logo {
+        width: 200px;
+    }
+    .menu a{
+        font-size: 16px;
+    }
+
+@media screen and (max-width: 768px) {
+    h1{
+        color: blue;
+    }
+    
+    .posicionamento-header{
+        position: relative;
+    
+    }
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 250px;
+        position: absolute;
+        top: 0;
+        right: 60;
+        background-color: rgb(32, 121, 121);
+    }
+    .menu a{
+        text-align: center;
+        padding: 15px;
+    }
+    .menu-barras {
+        display: inline-block;
+    }
 }
